@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Beast</title>
+    <style>
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
+        nav a { text-decoration: none; color: #349; font-weight: 600; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, monospace; }
+
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
+        table.metadata th,
+        table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
+        table.metadata th { background: #f0f0f0; }
+        table.metadata img { min-width: 150px; max-height: 400px; width: auto; height: auto; }
+
+        /* Float it right on "desktop" */
+        @media screen and (min-width: 768px) {
+          table.metadata {
+            float: right;
+            margin: 0 0 1em 1em;  /* push content away on the left */
+            max-width: 300px;
+          }
+        }
+
+        /* but on "mobile" treat it as normal first‑block */
+        @media screen and (max-width: 767px) {
+          table.metadata {
+            float: none !important;
+            margin: 0 0 1em 0;
+            width: auto;
+            display: block;
+          }
+        }
+
+        /* Global images */
+        img { max-width: 300px; width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <table class="metadata">
+  <tr><th>Type</th><td>Website</td></tr>
+  <tr><th>Founder</th><td>The Howlers</td></tr>
+</table>
+<p>The Beast is a clandestine, underground information‐leak platform operating within the universe of <strong>Project Nine</strong>, dedicated to exposing classified or otherwise suppressed documents from governments, corporations, and powerful organizations. Styled after real‐world whistleblowing sites, it combines crowd‐sourced submissions with automated parsing and a minimal but effective web front end to deliver “leaks” that fuel story missions, conspiracies, and side quests in a sci‐fi open‐world setting.</p>
+<h2 id="history">History</h2>
+<p>Founded in 4882‑P‑01 by a collective of renegade hackers calling themselves <strong>the Howlers</strong>, The Beast first emerged on the datanet following the controversial shutdown of the global news network <strong>AstraWatch</strong>. Rumors suggest that the Howlers were disillusioned ex‑employees of the Pan‑Terran Security Council (PTSC) who sought to undermine state propaganda and reveal official wrongdoing. Early versions of the site required manual uploads of encrypted ZIP archives; by 4883‑P‑04 they had integrated an encrypted submission portal and adopted a lightweight CSV‑backed document index to streamline publication.</p>
+<h2 id="organization-and-structure">Organization and Structure</h2>
+<p>The Beast is deliberately leaderless, operating as a decentralized collective of:</p>
+<ul>
+<li><strong>Nodes</strong> – small, pseudo‑anonymous teams responsible for vetting, redacting, and formatting incoming documents.</li>
+<li><strong>Archivists</strong> – volunteers who maintain the searchable index (the <code>DocumentsList.csv</code>) and categorize leaks by origin, language, and subject.</li>
+<li><strong>Ghost Coders</strong> – back‑end developers who patch and harden the site’s security, ensuring The Beast remains accessible despite state‑sponsored DDOS attacks.</li>
+<li><strong>Curators</strong> – front‑end contributors who design the site’s user interface, balancing minimalism (to reduce detection) with readability for a broad audience.</li>
+</ul>
+<h2 id="mission-and-principles">Mission and Principles</h2>
+<p>The Beast professes the following tenets:</p>
+<ul>
+<li><strong>Transparency</strong>: Knowledge is power; the public has a right to see unvarnished truth.</li>
+<li><strong>Security</strong>: Submitters must be protected from retaliation via end‑to‑end encryption and anonymizing proxies.</li>
+<li><strong>Neutrality</strong>: Leaks are published without editorial bias—documents speak for themselves.</li>
+<li><strong>Open Access</strong>: All materials remain free to view and download, regardless of user affiliation or location.</li>
+</ul>
+<h2 id="submission-process">Submission Process</h2>
+<p>Prospective whistleblowers submit documents through:</p>
+<ul>
+<li><strong>Encrypted Submission Portal</strong>: A Tor‑hidden service that accepts AES‑256‑encrypted archives.</li>
+<li><strong>Secure Email Gateway</strong>: For non‑technical sources, an encrypted SMTP relay at <a href="mailto:leaks@thebeast.in.projectnine.world">leaks@thebeast.in.projectnine.world</a>.</li>
+</ul>
+<p>Each submission is assigned a unique identifier and routed to the nearest Node for verification. Trained Nodes perform basic redaction (removing personally identifying metadata) and classify documents by <strong>Category</strong> (e.g., Military, Corporate, Scientific) and <strong>SourceLanguage</strong>.</p>
+<h2 id="technology-infrastructure">Technology Infrastructure</h2>
+<ul>
+<li><strong>Frontend</strong>: A TailwindCSS‑driven single‑page application that loads document metadata from a CSV index using Papa Parse.</li>
+<li><strong>Indexing Backend</strong>: Lightweight Node.js microservices that update the CSV and propagate changes to mirror sites.</li>
+<li><strong>Mirrors</strong>: Distributed across five independent servers in neutral‑zone satellite relays, each synchronizing hourly to resist censorship.</li>
+<li><strong>Search &amp; Filters</strong>: Client‑side JavaScript applies full‑text search, category filters, and language filters to the loaded index, minimizing server‑side footprint.</li>
+</ul>
+<h2 id="notable-leaks">Notable Leaks</h2>
+<ul>
+<li><strong>Operation Cerberus Logs</strong> (4883‑P‑12): Internal memos revealing covert PTSC drone‑strike authorizations over civilian habitats.</li>
+<li><strong>GeneSplice Research Files</strong> (4884‑P‑05): Proprietary genetic‑editing blueprints from biotech giant <strong>TerraSynth</strong>, sparking public outcry over unauthorized human trials.</li>
+<li><strong>Vector Nova Payload Specs</strong> (4884‑P‑11): Blueprints for an orbital kinetic weapon, leading to a fracturing of the Terran Confederation peace talks.</li>
+</ul>
+<h2 id="influence-and-reception">Influence and Reception</h2>
+<p>Within the game world, The Beast has become a key source of player missions—heroes and antiheroes alike chase down document leads to uncover conspiracies or forge alliances. Factions either vilify it as a traitorous blot on national security or lionize it as a champion of free speech. In lore, its anonymous operators have been credited with destabilizing corrupt regimes and exposing corporate malfeasance, altering storylines across major urban centers like <strong>New Olympia</strong> and <strong>Helios Prime</strong>.</p>
+<h2 id="controversies-and-criticism">Controversies and Criticism</h2>
+<p>Critics argue The Beast operates with insufficient oversight, allowing unverified or forged documents to circulate unchecked. Certain leaks have inadvertently endangered civilians by revealing safe‑house locations or undercover agent identities. Governments across the Sol Sector have labeled the site “terrorist propaganda” and attempted, repeatedly, to scrub its mirrors—so far without success.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><strong>Project Nine Databank</strong></li>
+<li><strong>AstraWatch Network</strong></li>
+<li><strong>Pan-Terran Security Council (PTSC)</strong></li>
+</ul>
+<h2 id="external-links">External Links</h2>
+<ul>
+<li><a href="https://in.projectnine.world/TheBeast/Submit">Secure Submission Portal (Tor Only)</a></li>
+<li><a href="http://in.projectnine.world/TheBeast.com/DocumentsList.csv">Leaked Documents Index (CSV)</a></li>
+</ul>
+<p><em>Note: All dates use the Terran Standard Calendar, year 4885–P era.</em></p>
+
+        </article>
+        
+    </div>
+</body>
+</html>
