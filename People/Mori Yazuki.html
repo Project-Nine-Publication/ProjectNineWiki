@@ -18,6 +18,16 @@
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
+        /* Metadata‑table images: min‑width 150px, max‑height 400px */
+        table.metadata img {
+            min-width: 150px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+        }
+
+        /* Global images */
+        img { max-width: 300px; width: 100%; height: auto; }
     </style>
 </head>
 <body>
@@ -26,9 +36,9 @@
         <table class="metadata">
   <tr><th>Type</th><td>People</td></tr>
   <tr><th>Region</th><td>Tellus</td></tr>
-  <tr><th>Country</th><td>_(Japan)_</td></tr>
+  <tr><th>Country</th><td><em>(Japan)</em></td></tr>
   <tr><th>Race</th><td>Tellurian</td></tr>
-  <tr><th>Organization</th><td>_(XXX Gang)_</td></tr>
+  <tr><th>Organization</th><td><em>(XXX Gang)</em></td></tr>
 </table>
 <blockquote>
 <p>The key is not to cause resentment but fear. Surprise factor is crucial.</p>
