@@ -14,16 +14,29 @@
         code { font-family: Consolas, Monaco, monospace; }
 
         /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
-        /* Metadata‑table images: min‑width 150px, max‑height 400px */
-        table.metadata img {
-            min-width: 150px;
-            max-height: 400px;
+        table.metadata img { min-width: 150px; max-height: 400px; width: auto; height: auto; }
+
+        /* Float it right on "desktop" */
+        @media screen and (min-width: 768px) {
+          table.metadata {
+            float: right;
+            margin: 0 0 1em 1em;  /* push content away on the left */
+            max-width: 300px;
+          }
+        }
+
+        /* but on "mobile" treat it as normal first‑block */
+        @media screen and (max-width: 767px) {
+          table.metadata {
+            float: none !important;
+            margin: 0 0 1em 0;
             width: auto;
-            height: auto;
+            display: block;
+          }
         }
 
         /* Global images */
