@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Compressed Quantum Storage</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(Notice those might not be Medalian technology but other Central Stage participants' technology, so we might want to move this entry somewhere else)</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(Notice those might not be Medalian technology but other Central Stage participants' technology, so we might want to move this entry somewhere else)</p>
 <h2 id="type-a-yarov-ablakov-backpack">Type A - Yarov-Ablakov backpack</h2>
 <p>Storing items and equipment, shrinks items with quantum singularity and restore upon extraction.</p>
 <h2 id="type-b-quantum-cache">Type B - Quantum Cache</h2>
@@ -60,7 +75,8 @@
 <p>With Atomic Storage, users can upload their digital files into a specially designed Atomic Storage device that uses individual atoms to store information. The atoms are arranged in a precisely encoded pattern, using quantum entanglement to ensure that the information remains secure, accurate and preserved over time. But it’s not just the tiny size that makes Atomic Storage such an amazing system. By utilizing quantum mechanics, this technology offers an unprecedented level of encryption, preventing data breaches or leaks. The advanced algorithms incorporated within Atomic Storage detect any unauthorized access attempts, making your data virtually unhackable.</p>
 <p>To use Atomic Storage, simply connect your device to the storage unit and transfer your files using the special software provided. Given the tiny size of the Atomic Storage device, it can be used almost anywhere – from your smartphone to your PC, and even in wearable technology devices. With its compact and secure design, Atomic Storage offers an impressive storage capacity that vastly exceeds the capacities of current physical devices. And with the promise of unprecedented data protection and security, Atomic Storage is set to change the way we store and store our digital data forever.</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

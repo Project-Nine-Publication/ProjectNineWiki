@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>千秋叶君代</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <blockquote>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <blockquote>
 <p>She's the most beautiful woman in Chinnan (Japanese) history.</p>
 </blockquote>
 <p>在千秋叶年幼的时候乡里有个文生的布衣（De或者Di）曾经非常爱她，后来文生去京都念书时还时常给她寄来京都的物产。千秋叶跟当地一个有名的富绅的儿子好上、一下子从原先的圈子到了那个人的圈子中。后来因为国家纷乱富绅带头起义、儿子在一次征战中死去。千秋叶跟着富绅逃亡邻近的faction。富绅的妻子死后、其将儿子遗妻纳为自己的妻子。后来fraction的领袖听闻了千秋也的美貌谋杀了富绅、将千秋叶收入自己府中。在？？（最后的将军）战败？？？（纳入府中的将军）之后、？？收留了千秋叶并将其纳为妾、对其恩爱有佳。然后好景不长、？？的手下？？？？谈恋千秋叶美色勾结乱党？？？？？联合造反杀害了？？然后自立成王，后面的故事便是千秋叶在某个他酒醉醺睡的夜晚杀之为？？报仇然后自刎。（灵感来源：黄欣欣与我早已只是偶尔联系都谈不上的情分，我对她的喜爱也不过是心灵的爱慕，其自己的生活、与她所喜爱的男生经历的圈子已不是我们可想）</p>
@@ -218,7 +233,8 @@
 </li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

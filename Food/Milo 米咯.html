@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Milo 米咯</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <ul>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <ul>
 <li><strong>类型</strong>：酥</li>
 </ul>
 <p>一种酥脆的甜点，并不是在九层楼内什么特别出名的食物。在[[九层楼6楼|九层楼六层]]宽桥（五楼[[骑士阶梯]]上去左转路面右侧便是。左侧是[[暗巷街]]）边暗巷街对面有售。店主是[[一位瘦削的中年男性|(待命名)]]。这个销售Milo的吃铺中除了Milo还有其他各种形状和大小以及颜色的酥脆面包类甜点（我还真不知道这个品种该怎么说，跟Chestnut的那个超级甜的东西是一类——Donuts但是比较脆？）。除了现场制作的还有一些装在透明罐子中的用于销售的。这是一家可以流动的（虽然人们一般不这么做）餐车类吃铺，为单侧完全开放背面有窗（后面就是桥下）侧面有门的结构。正面有木板遮住的一个出口和玻璃橱窗遮挡的部分食物。车内有炊具等。<!--另外实在不知道原生中的那个男主角是怎么回事，连身份卡都没有？这种货币的消费方式在久层楼中早已废除，即使是最为古典的餐厅也采用了信息化管理手段啊。//当然不排除有些餐厅以此做为宣传手段的可能性。--></p>
@@ -59,7 +74,8 @@
 <li>Source: 原九层楼记梦</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

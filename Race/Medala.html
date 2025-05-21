@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Medala</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(This entry is about the Medalian Civilization, for Medalian people - racial/biological related information, see &quot;Medalian People&quot;)
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(This entry is about the Medalian Civilization, for Medalian people - racial/biological related information, see &quot;Medalian People&quot;)
 (PENDING MIGRATING RACE DETAIL INFORMATION TO MEDALIAN PEOPLE ENTRY)</p>
 <p>Name: Medala, 美达拉，美达拉文明，美达拉人，美达拉文明簇</p>
 <p>The word &quot;Medala&quot; is an umbrella term that refers to a range of species and meta-species from the Medalian cultural complex. The home for the Medalian people are the planets within a distant galaxy in the Doma (planetary) system. The origin of their development is on a planet called Ids - realm of Gods.
@@ -169,7 +184,8 @@ overview &quot;They depart from the moon Osmuk of Fukxim.&quot;</li>
 <li>Why do Medalians Looks like Humans? Answer: (#20230406) This is a constantly asked and frequently brought up question. In short, the answer is: they only look so in the minds of those who wish to perceive them as such. (#20230408) No, they don't.</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ding Zunan 丁祖楠</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <table class="metadata">
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <table class="metadata">
   <tr><th>Type</th><td>People</td></tr>
 </table>
 <p>丁祖楠 is the friend of 萧衎 at high school.</p>
@@ -56,7 +71,8 @@
 <li>(Character, story) （萧衎的好朋友丁祖楠高中时候干的事儿。）高中三年作文从来不按题目写，每次都是一首情诗，总是被老师批评。三年之后出版，而且一点儿不碍事（高考就正常写、通过考试）。这种方法可以在高中时期就有同学老师等传阅宣传。<!--(Source) 出处：Jerry Sun 20191227 Lablando Varadero 早餐--></li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

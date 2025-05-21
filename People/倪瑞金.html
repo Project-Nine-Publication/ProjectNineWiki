@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>倪瑞金</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Names: 王丽 or 邓丽婷-&gt;邓婉婷 or 倪一萍/李平/倪瑞金 <!--Consider make 倪瑞金 his second girlfriend, met at high school-->
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Names: 王丽 or 邓丽婷-&gt;邓婉婷 or 倪一萍/李平/倪瑞金 <!--Consider make 倪瑞金 his second girlfriend, met at high school-->
 English name: Lin <!--Original idea was "林某某" - then later decided 不要使用“林徽”，太明显而不是直接完全使用的参考会让人觉得太粗糙（意思是要么完全原创，要么直接使用林徽因更恰当）-->, Rosemary
 职业：See timeline.</p>
 <p>萧衎女友。大学时候跟萧衎经同学介绍（联谊）认识。父母属于比较传统的中高产——母亲是公务员<!--具体工作？-->，父亲是商人，家里生产的是航天仪器配件（如果不是首都而是二三线地方的话就可以是生产飞机轮胎这种苦活）——重要的是父母从小都是知识分子，大学毕业生，母亲甚至可能是研究生（在他们那个时候这是很高的学历）。倪瑞金从小到大都在（北京）长大、生活、学习。</p>
@@ -57,7 +72,8 @@ English name: Lin <!--Original idea was "林某某" - then later decided 不要�
 <li>以上关于一个写实的形象差不多到位——但我们需要一种方法来“艺术化”这个角色的特征。</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

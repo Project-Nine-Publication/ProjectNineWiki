@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>瓦尔基丽雅 Valkyrja (Valkyria) (PENDING RENAME)</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(THIS IS A LEGEND FOR SURE, BUT IT'S NOT A TRUE &quot;LEGENDARY OBJECT&quot; IN THE SENSE OF 神器; It's just a techno wonder)</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(THIS IS A LEGEND FOR SURE, BUT IT'S NOT A TRUE &quot;LEGENDARY OBJECT&quot; IN THE SENSE OF 神器; It's just a techno wonder)</p>
 <p>(来源待议，历史待议，存在意义待议)</p>
 <p>Historically possess by Kun, the last instance was protected and owned by Mr. Leng (who asked 白斩 for its usage and kind of took it from 白斩, who was authorized by Kun VII; When Kun VI came, she took it back). It's an object that mostly serves symbolic value for it's not particular practical in any aspect. It's symbolized as one of Kun's most precious possessings（珺之至宝），以圣剑形式存在。It's honestly nothing special except it's a marvel (like pyramids) and serves mostly symbolic and for fun (like a jewled crown/tiara). For it's too costly to be constructed and not superbly practical. So it's built once, and kept as is. To become an owner, the previous owner just need to transfer the ownership (teaching the way of using it) in a ritual.</p>
 <p>It's built by Kun III for fun - for it's relatively easy to build it for anyone possessing the power of Hyupeda. Kun VII doesn't even care that much about it and when she left, she gave it to 白斩 as a means to comfort Mr. Leng that she/Kun VI will come back. Delinm doesn't want to give Mr. Leng directly because Mr. Leng is too ambitious and might take it as a symbol of power.</p>
@@ -61,7 +76,8 @@
 <p>(名字待议，待修正，待中文balanced name)</p>
 <p>Valkyria -&gt; Valkyrja: Using the image as a (group of) female warriors to symbolize a weapon.</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

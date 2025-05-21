@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Legendary Objects</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <blockquote>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <blockquote>
 <p>神器不过是科技发达、制作复杂、独一无二。类似奇迹。技术上而言可以仿造，只是成本过于高昂——相比仿造，不如重新根据需要设计。长城是，Airi是，贝冶丹鼎是，时间加速器也是。神器不一定是界器，可以根据独特的功能来创建。神器往往倾国家之力多年、企业巨额投资在个体项目或者个人毕生心血打造。神器的复杂性可以是原理上的、结构上的（核聚变），或者单纯材料上的（例如核弹其实没什么结构复杂性）。但往往最好的效果是最简单的结构单纯大尺度堆积的结果，例如1.5 trillion parameter GPT model.</p>
 </blockquote>
 <p>Legendary objects are contained within themselves the connection to the origin of worlds. Almost all legendary objects are directly or indirectly built by gods - or someone attaining the level of power as gods. Legendary objects are legendary/legend because: 1) They are one of a kind, 2) They are not usually seen, or may not even possess a physical form, 3) Their power (in terms of destructive or constructive) is at least comparable to a dozen countries' collective effort, in terms of power output, it's at least a few dozen nuclear power plants - some are even much more extraordinary; 3) It's possessed by a single (group of) person at a time, and thus the access to it is limited, 4) There are lots of tales/folklores/legends/myth surrouding the object and the object likely has a long history (&gt;2000 years); 5) Most original legendary objects are built by gods (Fepulans players), notably few exceptions are constructed by man (humans/tellurians, medalians, krukians) - actually maybe just Kun VI Chamurika and some Krukian genius; 6) They condese lots of energy/power/substance/structure within very limited space/form/shell. Due to their superbly powerful nature and high-level construct, those legendary objects can usually be put into a variety of ingenous use. However, they do have limits, and we typically very very rarely allow things that are galactical scale.</p>
@@ -66,7 +81,8 @@
 <li>Legendary Object 神器</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

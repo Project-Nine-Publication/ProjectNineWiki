@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Whisper - The School</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Whisper is a multi-functional university, and spiritual descendent of the original VMA school at Vandentra. It's a full-spectrum/holistic boarding school, research institute and educational and labour certification instution inside NFC. It is considered one of the highest educational facility in NFC and even across the world. Though due to the way it operates and some of the controversies, Whisper is certainly not ranked among other traditional educational institutions.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Whisper is a multi-functional university, and spiritual descendent of the original VMA school at Vandentra. It's a full-spectrum/holistic boarding school, research institute and educational and labour certification instution inside NFC. It is considered one of the highest educational facility in NFC and even across the world. Though due to the way it operates and some of the controversies, Whisper is certainly not ranked among other traditional educational institutions.</p>
 <p>At the very beginning, Whisper was the private institution set up by the Medala people to communicate and exchange culture and education with the Tellus people. Historically, such institutions are not limited to a single place - different cities have different forms of such exchanges albeit similar functions. The &quot;Whisper&quot; that we talk about refers specifically to the former and later reformed complex inside NFC. After (the war), various VMAs are decommissioned, and Mr. Leng/Tao Ye re-established Whisper at NFC to 纪念 that period. The overall organization scheme and teaching style of Whisper is already very different from the original VMA style because Tao Ye (the chief education and architecture architect) brought lots of new (and somewhat more aggresive) ideas into the school.</p>
 <h2 id="naming-and-etymology">Naming and Etymology</h2>
 <ul>
@@ -160,7 +175,8 @@
 <li>DigiKam tagged &quot;Whisper&quot; (for style reference, likely deprecated now)</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Story of Two Brothers 两兄弟寓言</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>The story of two brothers provides a striking picture as to the creation of this universe and in particular, it involves (Buddhism) idea of reincarnation. The story is short and goes like this:</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>The story of two brothers provides a striking picture as to the creation of this universe and in particular, it involves (Buddhism) idea of reincarnation. The story is short and goes like this:</p>
 <p>At the beginning there are just two brothers in a hotel room, one of them is a programmer (or both might be). And he felt bored, so he wrote a program to send his other brother in and play.</p>
 <p>A very fundamental key idea, or the &quot;Crystal Interpretation&quot; of this is: everyone is one and same and just a different story play. (I think this idea is taken directly from Monore's book though I don't remember it clearly) For when the second brother was playing that game, he understood a few things: 1) He and his brother are one and the same, 2) Men and women are one and the same, 3) Everyone on this planet that he lives in is just one iteration of his game play, and to a larger extent, that applies to all lives and all entities in this universe. A planet is just a longer incarnation.</p>
 <h2 id="archetypes">Archetypes</h2>
@@ -57,7 +72,8 @@
 <li>The idea that we are the universe, and universe is us, and how everyone is effectively connected</li>
 </ol>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Supercharged Storage Battery</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Chinese: 魔旷/魔旷石(自发光), 晶铁(raw form), 魔矿/晶石, 魔晶石
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Chinese: 魔旷/魔旷石(自发光), 晶铁(raw form), 魔矿/晶石, 魔晶石
 Terminology: 释电盒/壳，离电盒</p>
 <p>Medalian technology can turn any sort of crystallized structure into energy storage device, aka. batteries - apparently, certain crystals are better than others in holding energy. Such batteries can either exhibit better energy capacity in general, or have one-shot super high voltage (for specialized usages) - which are dangerous when not handled properly. Most of these are radiactive, so a protective metal shell is necessary for proper storage.</p>
 <p>Some types of this material/device is called 晶铁. However, even Medalians are not super efficient in producing this kind of devices - surprisingly (or not surprisingly because Kruks are just better in tech in general than Miah), the better, more dense-storage and higher-charge (multi-shot voltage) crystalized batteries are created and used abundantly by Kruks.</p>
@@ -66,7 +81,8 @@ Terminology: 释电盒/壳，离电盒</p>
 <p>Embarking on a quest to actualize her findings, Dr. Sterling assembled a team of leading scientists and engineers to develop these &quot;Crystal Capacitors.&quot; Unknown to her, a greedy and unscrupulous organization with eyes on the potential fortune to be gained from her research sought to steal the technology for its profit-driven goals.</p>
 <p>The Crystal Capacitor paints a captivating tale of scientific ingenuity, corporate greed, and the ethical challenges that come with the power offered by cutting-edge technology. Our protagonists must face the relentless pursuit of this nefarious organization while trying to ensure that their revolutionary invention benefits all of humankind. Along the way, they discover that the crystalline structures offer not only untold energy storage capacity but also unlock secrets of physics previously believed to be mere fantasy.</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

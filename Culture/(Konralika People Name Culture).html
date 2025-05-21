@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>(Konralika People Name Culture)</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,14 +50,24 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>A proper name is a noun that identifies a single entity and is used to refer to that entity (Africa, Jupiter, Sarah, Tesla, Inc.) as distinguished from a common noun, which is a noun that refers to a class of entities (continent, planet, person, corporation) and may be used when referring to instances of a specific class (a continent, another planet, these persons, our corporation).</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>A proper name is a noun that identifies a single entity and is used to refer to that entity (Africa, Jupiter, Sarah, Tesla, Inc.) as distinguished from a common noun, which is a noun that refers to a class of entities (continent, planet, person, corporation) and may be used when referring to instances of a specific class (a continent, another planet, these persons, our corporation).</p>
 <p>Surnames have not always existed and are still not universal in some cultures. The tradition has arisen separately in different cultures around the world.</p>
 <p>(Using names has been documented in even the oldest historical records. Examples of surnames are documented in the 11th century by the barons in England. English surnames began as a way of identifying a certain aspect of that individual, such as by trade, father's name, location of birth, or physical features, and were not necessarily inherited. By 1400 most English families, and those from Lowland Scotland, had adopted the use of hereditary surnames.)</p>
 <p>Reference: <a href="https://en.wikipedia.org/wiki/Surname">https://en.wikipedia.org/wiki/Surname</a></p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

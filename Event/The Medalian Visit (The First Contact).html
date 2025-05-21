@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Medalian Visit (The First Contact)</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>The Medalian didn't even intend to pass by Tellus, and the visit is an accident. When the expedition team first detected X13 and eventually detected Tellus, they were surprised and thought maybe their course to Eva was mistaken and this might be it because of the similarities between Tellus and Eva (from description or observation from Hyypeda) - hence they gave Tellus the name Evatux. Then after they see and learnt a bit more about the planet, they known they were wrong. However they are curious and interested in establishing some contact.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>The Medalian didn't even intend to pass by Tellus, and the visit is an accident. When the expedition team first detected X13 and eventually detected Tellus, they were surprised and thought maybe their course to Eva was mistaken and this might be it because of the similarities between Tellus and Eva (from description or observation from Hyypeda) - hence they gave Tellus the name Evatux. Then after they see and learnt a bit more about the planet, they known they were wrong. However they are curious and interested in establishing some contact.</p>
 <p>The Medalian expedition team consists of two ships: military ship and civilian ship. The military ship also serves scouting purpose and it is equipped with industrial applications to build star gates. That's the ship that first arrived here in X13, got involved in the unxpected combat before the civilian ship could arrive, and did NOT finish the star gate. The Krukians then helped finish the star gate and the arrived civilian ship cannot decide what to do for Queen is not there.</p>
 <h2 id="naming-and-etymology">Naming and Etymology</h2>
 <ul>
@@ -54,7 +69,8 @@
 <li>(#20230906) The First Contact: It's the first contact for Tellurians, and it's the first contact between Tellurians and Medalians.</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

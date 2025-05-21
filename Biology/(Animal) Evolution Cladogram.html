@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Animal Evolution - Cladogram on Tellus and Ids</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(Things like this is very specific and should be handled in two aspects, both of which are independently maintained and serves different purpose: 1) This P9 Rev1 Text Wiki, which provides raw principle definition of all things; 2) Freehand/Scapple or other diagram formats, which provides straightforward one-glimpse view of current state of things.
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(Things like this is very specific and should be handled in two aspects, both of which are independently maintained and serves different purpose: 1) This P9 Rev1 Text Wiki, which provides raw principle definition of all things; 2) Freehand/Scapple or other diagram formats, which provides straightforward one-glimpse view of current state of things.
 In ths latter case, only names shall be mentioned and additional descriptions will have to see specific wiki entries eventually - on the other hand, a simple flat list of notes can be provided for quick indexing before things are moved to Wiki proper)</p>
 <p>This wiki entry attempts to classify and provide a base framework or ALL SPECIES in the Project Nine World, and it specifically concerns: Animal kingdom (Animalia), plant kingdom (Plantae), fungus kingdom (Fungi), and maybe some other forms of life (Protista, Monera, and maybe other biological-like magical beings). It's divided into Medalian World and Tellurian World and concerns mostly life on Tellus and Ids but may also cover surrounding environments as well.</p>
 <p>(WHAT'S OUR POLICY FOR ADDING NEW ANIMALS? DO WE NEED TO WORK OUT EVOLUTION PATH, MAKE EXPLICIT REFERENCE SOURCE, PROPOSE INITIAL VARIATIONS, AND PROVIDE HABITAT DETAILS, AND TAXONOMY? IS THIS DOCUMENT THE SOLE PLACE WE PUT SUCH IDEAS? WHAT ABOUT UNDEVELOPED IDEAS THAT WE MERELY SAW FROM OTHERS SKETCHES AND ONLINE PICTURES/WEB LINKS - WHERE DO WE PUT THOSE? WHAT COUNTS AS PROPER SOLIDIFICATION AS A SPECIES? WHAT COUNTS AS BEASTS?)</p>
@@ -100,7 +115,8 @@ In ths latter case, only names shall be mentioned and additional descriptions wi
 <li>(Alien Lifeform) Alien 1: Biosuit, no vocal cord and talk with telepathy (EM wave). Physical structure is actually quite weak without shield or under direct hit. (idea from) Independance Day 1996, but we are making their telepathy skill scientifically based on EM waves, like bats - so it's detectable. Alternatively, they can talk with a special type of vocal cords using supersonic - although justification is needed why don't they develop at least some form of &quot;common sound range&quot; that's shared by most animals which will give them evolutionary advantage when it comes to communicate (or simply scare off) other animals.</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Song Can 宋粲</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Names: Song Can, 曲蚕山
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Names: Song Can, 曲蚕山
 Original Name: Song Can 宋粲
 Nickname: 蚕歌, 蚕山曲轻 (Online)
 Pen Name: 曲蚕山
@@ -58,7 +73,8 @@ Occupation: Writer, Novelist, Historian</p>
 <p>作为一个多伦多本地人、Western大学史学出身的人自有其严谨性，但因为职业需要、fictional literature与自身的渊源，所以也可以算是个想象力天马行空的人了。在楼内以<strong>蚕歌</strong>为名的也有过几部小说颇为知名，寻常教授级别的人物，也参与过一些正史和九层楼史料参考文献的编纂，闲暇时候喜欢写一些针砭时事、历史小品在自己的博客上与人分享。宋粲是在九层楼的前身由Tao Ye和冷先胜创立的投资集团大力发展商饮(商业？)、购置地产的时候与冷先胜/Tao Ye在<strong>威斯波尔</strong><em>建筑与人类史峰会</em>上认识的(yes, a very business setting)，那会儿新重建不久的<strong>威斯波尔文史学院</strong>也在招募人才，便遇到了。</p>
 <p>Some of his famous novels: The Prehistoric Civilization/Super Ancient Civilization &quot;史前文明&quot; (text treatise, proses; Origin of agriculture etc) <!--Notice Baidu Baike topic on this is not "prehistoric" at all (per anthropology sense) but pure picture, which is fun to look at: baike.baidu.com/item/史前文明/1246168, also see offline `(百度百科, Garbage) 史前文明（历史时期）_百度百科 (8_13_2021 11_43_59 AM).html`; Song Can's work can also cover things more ridiculous like here: zh.wikipedia.org/wiki/超古代文明, ja.wikipedia.org/wiki/超古代文明-->, <em>The Total War</em> (historical novel) , <em>Dark Planet</em> (sci-fi),</p>
 
-    </article>
-    <footer><hr/><p>In Other Languages: <a href="Notes_.html">Other</a></p></footer>
+        </article>
+        <footer><hr/><p>In Other Languages: <a href="Notes_.html">Other</a></p></footer>
+    </div>
 </body>
 </html>

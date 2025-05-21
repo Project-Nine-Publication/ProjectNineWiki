@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mu Delin</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>穆德霖是全球四大Engineering Consulting firm <!--又说Accounting而非Engineering.-->之一<strong>德科（德勤+科进）(DECO)公司/德霖企划</strong>的CEO（公司名称不提）。</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>穆德霖是全球四大Engineering Consulting firm <!--又说Accounting而非Engineering.-->之一<strong>德科（德勤+科进）(DECO)公司/德霖企划</strong>的CEO（公司名称不提）。</p>
 <p>个人主要成就：曾经以优异的成绩毕业于<strong>国立理工大学</strong>，先后工作于。。。。家族首先在日本发展。德霖企划以前曾经是一家小的consulting firm 德霖顾问Ltd？还是一直也有家族企业支持。妹妹叫<strong>穆美霖</strong>，担任CFO。</p>
 <h2 id="naming-and-etymology">Naming and Etymology</h2>
 <p>Names: Mu Delin, 穆德霖</p>
@@ -56,7 +71,8 @@
 <h2 id="notes">Notes</h2>
 <p>(Plot) 说不定某段时间跟萧何娜在谈恋爱，这样方便妒家举行婚礼的时候带萧衎从主宾席入场、而不必走visitor通道。穆德霖感情生活比较private和diverse。</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

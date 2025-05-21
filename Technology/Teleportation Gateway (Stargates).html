@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Teleportation Gateway</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>The galactical-fixed locked location gateways are constructed by Medalians and by design/nature excludes Krukians (somehow).</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>The galactical-fixed locked location gateways are constructed by Medalians and by design/nature excludes Krukians (somehow).</p>
 <h2 id="type-a">Type A</h2>
 <p>This particular type of gateway are constructed with special kinds of matters and can only be constructed at places where the constructor have visited - i.e. to create communicating channel, the constructor must bring a particular type of entangled communication channel all the way to the destination from the starting point, and then the construction can begin at the destination. The gate way is then magnified with the existing communication channel. This is necessary because otherwise it's not really possible to arbitrarily locate a distant location in the universe precisely.</p>
 <h2 id="type-b-stargates">Type B: Stargates</h2>
@@ -74,7 +89,8 @@ Stargates are different from other acceleration-based gateways, which controls s
 <p>Any other forms of faster-than-light travel generally follow GR (general relativity), meaning to the traveller he's travelling fater than light, but to the otherwise world, it's light that's transmitting (thus causing the time difference between the traveller and the destination).</p>
 <p>(This might be a bad idea, pending re-volutionize the concept) Ever since the invention of Quantum Tunnel Scanning (or Photonic Scanning), there are multitude of issues related to duplicating quantum information <!--(Inspiration) https://baike.baidu.com/item/摇光/49940872-->  - in general, for any practical quantum teleportation, information CANNOT be duplicated or stored (because information at the quantum level is physical material rather than digital data). However, for the ancient Kruks, they invented a way to probe and replicate certain aspects of information at the human-brain level, thus making artificial brains. There are at least two different kinds of technologies for doing this: earlier prototypes uses artificial neurons, which apparent doesn't work due to its complexity and lack of certain quantum effects; Later invention of Quantum Tunnel Scanning enabled <strong>quantized printing</strong> at the electron level or actually sub-atomic level, thus creating <em>the abilities to print brains</em> <!--I wonder whether they can be this powerful, and whether artificial brains are digital, and whether it takes much more effort to produce a new artificial brain than simply programming some programs or whether it's possible to mass produce artificial brains at all; Either way, the cost of training an independant thinking individual is very hard-->? (We need to revoluntary means, it's hard to imagine producing 细胞骨架 （真核细胞中的蛋白纤维网架体系）with digital methods - even if manufacturing skills is really high - it can be done either biologically, which is less of a Kruks method but more of a Medalian method, or it should be done <strong>physicall</strong> - like how Machine Learning handles things mathematically, it should have a much simpler fundamental structure)</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

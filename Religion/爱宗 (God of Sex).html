@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>爱宗</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Ever since God of Sex left her blessing and left Tellus, a group of 虔诚 followers are touched by her great capabilities (Poladin not only have sex, as a Fepulans player, she's also capable of leaving many legacies behind, curing people of their disease, etc.) and her 事迹. E.g. she would have sex with the poor and the diseased and cure their disease. She teaches people how to love and care for each other.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Ever since God of Sex left her blessing and left Tellus, a group of 虔诚 followers are touched by her great capabilities (Poladin not only have sex, as a Fepulans player, she's also capable of leaving many legacies behind, curing people of their disease, etc.) and her 事迹. E.g. she would have sex with the poor and the diseased and cure their disease. She teaches people how to love and care for each other.</p>
 <p>A few notable traditions of the religion is the believe in non-sexual monogamy, because they wish and believe the only sex that should ever be conducted is when someone is ready to leave the mundane world and ascend to the Euphoria. At the same time, those followers of the 爱宗 are very diligent real-world livers - they take care of everything to be prepared for the solemn ascension. They also don't tend to have children.</p>
 <p>There are legacies (which are apparently not true) that Poladin died in her last sex act, ascending with her fellow Tellurians to the land of Euphoria in spiritual form.</p>
 <p>Related entries: Tellurian Sexuality, Poladin - God of Sex, Religion - 爱宗 (God of Sex), (Death) Euphthansia</p>
@@ -56,7 +71,8 @@
 <li>爱宗, 性宗</li>
 </ul>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

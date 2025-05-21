@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>车臣牌</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>例如粉色阵营（另有Lore名称）有很多可爱的角色卡牌。另有黑色阵营，绿色阵营，白色阵营，蓝色阵营，黄色阵营。
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>例如粉色阵营（另有Lore名称）有很多可爱的角色卡牌。另有黑色阵营，绿色阵营，白色阵营，蓝色阵营，黄色阵营。
 主角血量消耗完为止，主角血量可以累计，有牌型和技能可以给主角牌增加buff，包括直接数值buff和percentage buff。主角卡绘画十分独特（动漫画风，并不过分精致但是元素丰富）。属于fantasy游戏。
 角色卡一般上面画角色，下面写一句对话。另有一至两个技能，应该没有自己的血量，应该是一次性使用（就像是扑克牌）实现某种效果。（或许所有的卡牌都是角色卡，因为一次性使用）可能只有右上角写有一个伤害点数（2-6）。
 “车臣牌”是一种特殊牌，上面写有三个行为。。。
@@ -56,7 +71,8 @@
 三或者四大阵营，扑克牌数目（一副或者两幅），每次出牌可以不限制张数（手牌出完为止），该游戏0学习上手。如果一副扑克（54张）不够可以两副，一般一副扑克是两到三个人数目。扑克牌可以直接混用（即如果拆了两副那么可以用完之后按数目拆回）。出厂不同扑克可能带有少量不同的卡牌种类（具有一定的收藏和积累价值）。
 Lok Han带我们（我和Kong）在公车/火车上玩的。另有卡牌类型和规则细节已经忘记。这个游戏不必concept complete，我们只需要“mention”和侧面描述即可。颇为Popular。特点是她玩的时候会撕小卡片把自己的buff都记下来。</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

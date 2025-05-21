@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portkey 星刻 -> Hyupeda (Hipda)</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>At the very beginning the creators left now-called &quot;portkey&quot; as a shrine - a direct gateway to access the innerworld (potentially with some restrictions). By inputting increasingly bigger amount of energy and change modes of interaction, one can achieve different visuals with it.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>At the very beginning the creators left now-called &quot;portkey&quot; as a shrine - a direct gateway to access the innerworld (potentially with some restrictions). By inputting increasingly bigger amount of energy and change modes of interaction, one can achieve different visuals with it.</p>
 <p>Later when Ora Busa Lica the first queen successfully entered the Inner World and came out, she changed the form of it, making a much more accessible interface and increased the energy barrier to accessing it. the The vast amount of ordinary people should generally NOT be able to use Portkey to any useful extent - but only examine it with the power-interface (the brute force method by injecting external powers and operate through the interface Kun I left).</p>
 <ul>
 <li>(Design, #Balance) Maybe as a star chart it can only show other planets and locations as a map and can only show detailed information of the source planet - in other words, Medalian Queen cannot access more advanced information on Tellus directly from this. As such it's questionable whether Medalian Queen can remotely access information on the surface of Tellus at all! Also it might pose restrictions on the power of Medalian Queen on Tellus - could it be that the powers granted by the Portkey are only applicable on the confinement of the Doma system, or even only Ids?</li>
@@ -90,7 +105,8 @@ Portkey: The fact machine can see past, present and future. Past is determined a
 <p>Two outcomes: follow instructions and become most powerful civilization and destroy itself, throw it away.</p>
 <p>Portkey is source if infinite power, originally through heat (and thus called &quot;heatstone&quot;). The ancesers discovered the portkey in winter around a large area of dry lands (further of which is covered in snow). Latter it's configured to emit radiative light and pure energy instead and captured with some kind of solar panel device, providing power for some critical equipments.</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

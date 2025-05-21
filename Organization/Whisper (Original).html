@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Cosmopolitan Lyzeum (Original Whisper in Vandentra)</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>This is the original VMA established in Vandentra nicknamed &quot;Whisper&quot;. The official name for this is &quot;The Cosmopolitan Lyzeum&quot;, and it's a rather small scale school but with its own unique building, i.e. the twin towers.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>This is the original VMA established in Vandentra nicknamed &quot;Whisper&quot;. The official name for this is &quot;The Cosmopolitan Lyzeum&quot;, and it's a rather small scale school but with its own unique building, i.e. the twin towers.</p>
 <p>It's located at an empty park ground very close to center of the city (but to the west), as a gesture to show good peace/will.</p>
 <h2 id="naming-and-etymology">Naming and Etymology</h2>
 <p>We wanted something that signifies a sense of collaboration and has cultural significance/breakthrough between governments/countries/civilizations, and the german word and school style gymnasium sounds unique enough, and it is also calle Lyzeum.
@@ -57,7 +72,8 @@ Was looking for some word that connotates peace, collaboration, and cultural exc
 <p>In the past, the only concept we had related to the twin-tower design was likely a failed sketch we did during 2007-2009 (when Whisper, or &quot;the tower&quot; dream was first conceived) on an A4 paper (along with our little brown cover palm-sized notebook) which is certainly lost because we didn't have digitalization plan at that time. That's good, because that doesn't contain any useful detail/vision, so we are at a clean state.</p>
 <p>At the moment, we are starting afresh and rebuilding from &quot;impression&quot; (instead of trying to recreate an original concept) and put everything inside P9 DA Blender file: Project Nine DA://Blender/Dated/20230102/20230820 Old Twin-Tower School.blend</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

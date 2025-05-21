@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Description</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(Dream Inspires, Eam, Education Process, Special, #2022521) “E12 (English 12)” Examination System (pending better name)。一个阿尔法语非常独特的考试系统、培训系统、以及商业机构（类似IELTS、TOFEL或者新概念这种方式）。其中1-5只有阅读，4-8增加听力，6-12强调口语，8-12增加写作。
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(Dream Inspires, Eam, Education Process, Special, #2022521) “E12 (English 12)” Examination System (pending better name)。一个阿尔法语非常独特的考试系统、培训系统、以及商业机构（类似IELTS、TOFEL或者新概念这种方式）。其中1-5只有阅读，4-8增加听力，6-12强调口语，8-12增加写作。
 这个系统的特点是耗时长：最少需要6年才可以走完全部流程，并且根据训练方式，可以保证其考试认证结果长期有效，即不像IELTS那样考完2年作废。这主要是通过长期exposure和长期被动等待来加持。
 如果可以跟家长那边拿到3年到4年的时间，就肯定不会是学到一个废语。</p>
 <p>最开始的时候大家都是先报名一个相对应的培训班——系统的特点是培训班只要certificate就行，但是所有的examination是通过官方的方式来实现，并且Examination的话题非常的unpredictable因为基本上就是现实中的对话。E12的语言训练内容重点在12个方面，在每一级别的学习中都会融合其中几点：词汇，阅读，听力，写作，思辨，交流，自信与自我介绍，逻辑，语言历史，语感，浪漫伴侣，商业合作和社交。这其中最后两点的实现通过decent Media coverge、broad source of sponsorship以及在（尤其是官方正式考试中）认证阶段鼓励促进最优秀的参赛成员进入romantic travel trip来实现。有人说E12就是一场dating考试——比的是谁能够获得胜利，谁能够脱颖而出。但是现实是C阶段应试当天的交流经历已经足够让很多即便不会达到最优秀水平的应试者相互之间足够认识和了解和casual以碰撞出友情的火花。该考试只局限于年龄8-22之间的人，如果一个人22岁之前没有完成E6阶段的认证（即完全通过E6），那么就没有机会继续参与E12。这种低年龄的认证也是E12充满年轻热情的一个原因。考虑到Age of Consent，所有C类考试分考生年龄，即会场虽然还是接待所有人，但是考场分为15/18岁以下和15/18岁以上（取决于当地的age of majority）两种。</p>
@@ -55,7 +70,8 @@
 <p>C的考试第一项目也是最大的一个项目是现场的语言会话，包括在将近10个老师和20个其他考生的注视下站在讲台前看题回答和对答讲师问题。每一次的这种活动都有两到三个企业和私人赞助方，赞助方会给两个以上的偶数couple提供2-7天的全球旅行名额，一年内有效。</p>
 <p>在E12系统中达到并且完成E6水平的人一般已经具备基本的英语使用能力（相当于雅思5.5）。E12为了帮助E6以上学习者更好的提高阿尔法语会话应用水平，所有的E12认证教育机构会从E7开始跨入另一个档次：E7的机构必须有E12认证的阿尔法语本土专家在场交流，塑造语言环境。另外E12还在应试国提供语言环境全景沉浸式主题公园/主题小镇/游乐场（注意主题公园可以像是哈利波特城堡这种，不一定非得是游乐场，主题公园也可以是大型的电玩机构只要纯英语就行）：一个只说阿尔法语只用阿尔法语的游乐场，其中所有的员工都是从阿尔法语官方语言国家来的本土阿尔法语使用者。</p>
 
-    </article>
-    <footer><hr/><p>In Other Languages: <a href="E12 Language Grading &amp; Certification.html">English</a></p></footer>
+        </article>
+        <footer><hr/><p>In Other Languages: <a href="E12 Language Grading &amp; Certification.html">English</a></p></footer>
+    </div>
 </body>
 </html>

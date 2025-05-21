@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Notes</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <!--所谓天外有天，人外有人，人在江湖，很多争斗冲突往往身不由己，纵然冷先胜法力胜天、在地球上可以呼风唤雨，除去管理九层楼所需要面对的政治压力之外，或许还有从个人角度而言所需要经历解决的磨难——如果从武侠/传奇的角度来写作的话——换言之，如果冷先胜并非是退休隐居了的前辈高人，那么必然仍然actively engage in all kinds of 事端和争夺：包括资源和法宝。这世界上不会只有冷先胜一人可以到达瑞土、拥有传奇能力，古今中外修真得道的高人、宗教领袖、各派精英，其中明争暗斗、勾心斗角、大动干戈自然少不了。只是在当今社会，这些争斗未必是大规模的人尽皆知的公开争斗，倒可能是在比试场、私人宅院里面发生。想象Fate: Zero/Fate: Stay Night/Harry Potter and The Deathly Hallows那一类——寻常人可以波及到的是偶尔的新闻播报为爆炸、火灾、失踪事故。¶如果穹庐本是将population控制甚至炼化之邪器，那么各派高人，正或邪说，想要争夺，可以与冷先胜在5层平整公园约战。-->
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <!--所谓天外有天，人外有人，人在江湖，很多争斗冲突往往身不由己，纵然冷先胜法力胜天、在地球上可以呼风唤雨，除去管理九层楼所需要面对的政治压力之外，或许还有从个人角度而言所需要经历解决的磨难——如果从武侠/传奇的角度来写作的话——换言之，如果冷先胜并非是退休隐居了的前辈高人，那么必然仍然actively engage in all kinds of 事端和争夺：包括资源和法宝。这世界上不会只有冷先胜一人可以到达瑞土、拥有传奇能力，古今中外修真得道的高人、宗教领袖、各派精英，其中明争暗斗、勾心斗角、大动干戈自然少不了。只是在当今社会，这些争斗未必是大规模的人尽皆知的公开争斗，倒可能是在比试场、私人宅院里面发生。想象Fate: Zero/Fate: Stay Night/Harry Potter and The Deathly Hallows那一类——寻常人可以波及到的是偶尔的新闻播报为爆炸、火灾、失踪事故。¶如果穹庐本是将population控制甚至炼化之邪器，那么各派高人，正或邪说，想要争夺，可以与冷先胜在5层平整公园约战。-->
 <h2 id="key-features">Key Features</h2>
 <ol>
 <li>As a (intelligent and knowledgeable) father who raises her since young, he knows every thing she know and what she's thinking about. That's partly his altitude to her. Like kids dont learn the concept of sharing etc. Idea from:. A kid cannot come up with &quot;I eat fear for breakfast&quot; by herself, nor can the father teach her that because that's weird.</li>
@@ -56,7 +71,8 @@
 <li>(Kun to Mr. Leng) “你最大的问题，就是不能好好做人、偏想着长生不死”（改口吻）冷先胜不爱听</li>
 </ul>
 
-    </article>
-    <footer><hr/><p>In Other Languages: <a href="XianSheng Leng, Mr. Leng 冷先胜.html">English</a>, <a href="The Tale of Alternative Worlds_.html">Other</a></p></footer>
+        </article>
+        <footer><hr/><p>In Other Languages: <a href="XianSheng Leng, Mr. Leng 冷先胜.html">English</a>, <a href="The Tale of Alternative Worlds_.html">Other</a></p></footer>
+    </div>
 </body>
 </html>

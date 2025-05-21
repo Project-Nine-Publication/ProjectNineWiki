@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Outer World</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,16 +50,26 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>The &quot;Outer Worlds&quot; is roughly understood to contain philosophically two entities: The <em>parent world</em> that creates us, the <em>outer universe</em> that creates the parent world.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>The &quot;Outer Worlds&quot; is roughly understood to contain philosophically two entities: The <em>parent world</em> that creates us, the <em>outer universe</em> that creates the parent world.</p>
 <h2 id="the-outer-universe">The Outer Universe</h2>
 <p>State unknown.</p>
 <h2 id="the-parent-fepulans-world">The Parent (Fepulans) World</h2>
 <p><strong>Fepulans</strong> is a species lives in the darkness of their universe - the universe is so stretched out the only possible thing they can see is their local group. Their technology is unimaginably tremendously advanced and their civilization have lasted millions of billions of years. The technological achievement is so great that physical enjoyment and material needs is no longer an issue to be concerned with and for millions of years life lived without chance since they have already known everything there is to know about the universe. Life is in a sense &quot;boring&quot;, and for that the culture and entertainment industries is extremely well developed - but even so, after seeing everything there is to see and every story and every emotion there is to experience in the whole world and achieving the ability to live in eternity without aging, plenty of people choose to die since &quot;there is nothing left in the life to experience&quot; - their culture, despite its diversity, is so unified and singleton, they have such a desire to see what really lies beyond. But that, is something impossible to do.</p>
 <p>However, there is another problem for them: their universe is going to an end and colding out quick and all NATURAL stars in their local galaxy is dying out and NO ONE is able to harvest directly higher forms of the energies of the universe including the &quot;gravitational forces&quot; (black-holes alike) and many other things. As a civilization, Fepulans must find a solution soon, meaning their physics must achieve a break through - ideally go beyond the limit of their universe. For this reason, they are gathering all their resources to explore one topic that every reasonable physicist have though of before but dare not to explore - could it, by any chance, that their universe is a result of simulation? The answer to this questions might reveal the key for a breakthrough of their current situation and obtain an &quot;eternity&quot; for their civilization.</p>
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>

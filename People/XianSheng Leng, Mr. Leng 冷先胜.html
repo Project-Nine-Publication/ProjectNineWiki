@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mr. Leng 冷先胜</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>Origin: Kai
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>Origin: Kai
 Species: Medala - Miah
 Birth:
 Age: 378 # Calendar, counting from birth to present day
@@ -96,7 +111,8 @@ Kun VII brought the device with her when she left Kai. Mr. Leng always wanted to
 <p>Mr. Leng’s attention to Catherine is like a camouflage - when Mr. Leng and Zhang He were alone he tried to teach me (him?). But of course Zhang He was irritable towards Mr. Leng: &quot;what is the evidence that the things you mentioned even exist?!&quot; &quot;Evidence? It's right here! Light is the evidence - when objects move at relativistic velocities they shrink to become flat. Light are such objects that are moving so fast they literally become pure energies that light up our world!&quot;.</p>
 <p>Before Zhang He leaves CofN when he had a fight with Catherine. Mr. Leng get the news and asked him back for a talk because he deemed it necessary before he leaves. However that wasn't easy given that their relationship at that time was already not good. Then it happens as described above. During that time, Zhang He asked: &quot;then show me&quot;&quot;I can't&quot;&quot;then how do you know it's true&quot;&quot;because I have seen it, if you just allow yourself to calm down and follow my instructions I might be able to show you as well&quot;&quot;it's just your hallucination, how do you know that world even exists, how do you know it's not just your own made up syories&quot;&quot;it is a manifest of our minds, and indeed we could have done it in many ways, but some are different than others, some are more ????(superior) and guides us towards the gate of another world, but you got to follow what is true rather than get confused by your own bias. When you shall do that, you will be able to achieve much more, and even affect this reality.&quot;&quot;yet you don't have a proof&quot;&quot;I cannot show you&quot;&quot;enough bullshit, I am leaving&quot;&quot;I know you have it in you, no matter what you do, remember my words, ....&quot;&quot;I don't know why you summoned me here and not Catherine. Is she involved in all these?&quot;&quot;you are not an ordinary man, you mustnt let what you seen confuse you...&quot;</p>
 
-    </article>
-    <footer><hr/><p>In Other Languages: <a href="The Tale of Alternative Worlds_.html">Other</a>, <a href="Notes_.html">Other</a></p></footer>
+        </article>
+        <footer><hr/><p>In Other Languages: <a href="The Tale of Alternative Worlds_.html">Other</a>, <a href="Notes_.html">Other</a></p></footer>
+    </div>
 </body>
 </html>

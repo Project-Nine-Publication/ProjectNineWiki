@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Charles (Zhang?) - The Restaurant Owner</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <blockquote>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <blockquote>
 <p>There's nothing more boring than watching someone else play a RPG! So let's also be (aka. using our name) a small insignificant role in this novel.</p>
 </blockquote>
 <!-- I like it. This can be a self-contained small isolated piece that do not have much to do at all with the overarching concept of P9 and the Simulatione universe. -->
@@ -63,7 +78,8 @@
 <li>(design) The floor is diamond-shaped grid B/W tile, the seats are (synthetic) leather, two rows facing each others as a group. There are 3 to 4 columns of seats, each with 4 such small booths. The surrondings are glasses, the walls are just slightly taller than the seats. In general the space is quite spacious and bright, sitting in the corner of a traffic crossing that's not that busy. The operating hour of the restaurant is from 6 am to 4 am. Thrice a day some children will come do the cleaning. There is a washroom near the kitchen door. A homeless guy lives nears the seat there - the booth is always with a wooden sign &quot;Occupied&quot; on the table when he's absent. No one seems to bother much. Occasionally when there is an uproad, or someone didn't pickup his order for too long and Charles repeats a second time his name, the homeless would stand up and get his meal for him. ¶Usually when there are more than 10 tables occupied the system will stop taking new orders untill the number drops to 8. There are two speakers hang up in the wall behind Charles, those serve as his way of communication. Customers can order either while speaking to Charles or directly through the touch screeen near the entrance or at the bar. There is a giant TV after Charles - no usual bar stuff. The desk in front of Charles is a transmission belt, two ends leading back to the kitchen. After someone made an order he will be seated and someone from the kitchen will prepare the food well, put on the belt and Charles will annouce the name of the customer. This opens up some friendly pranks for those who enter their names through the touch screen. You can hear funny things like &quot;...&quot; sometimes. Surprisingly, either the names are censored or people are just friendly in general, Xiao Kan never heard of any otherwise inappropriate names. Charles the bar tender has very realistic looking upper body, well dressed in suits and always look sharp. His movement is very limited - the most it can do is to rotate, to fake some hand movement typing on a fake keyboard when someone make an order, and to point to the food someone ordered from the transmission belt. ¶&quot;I heard rumors that someone heard people talking behind that.&quot; ... ¶ (While Xiao Kan was chatting with Charles at the Bar, a tall lady came from behind) &quot;Don't get fooled by his blant appearance. This bad guy sleeps with young ladys after work.&quot; &quot;Never! How can you say something like that to our gentleman Charles?&quot; &quot;Well, how do you explain the underwear found in the garden? It can't be growing with the tomatoes?&quot; &quot;Not if it's red.&quot; ... &quot;Time to go, the make-up artist will come soon.&quot; ... &quot;Charles, give me a bottle of bear, with some salted penuts.&quot; &quot;Are you two supposed to be working in the kitchen?&quot; &quot;No? What made you think of that? It's automatic - r-o-b-o-t-i-c, you see.&quot; &quot;Our restaurant could use some little mystery.&quot; ¶ (Legend) The fact with this place might be that the kitchen in the back is actually highly automated. Neither Charles nor Jessie took care of the restaurant nor the garden - the make up artist does the most for the appearance of the place, the cleaning kids does all the surface work, and the supply lady handles replacing things or notify repairers when things are not working. Very likely there will be a garden guy who took care of the garden. Then the supply company will take care of re-fill the kitchen - those people might actually know and see what's behind the scene. Basically, once Charles set up the whole process, the system just works all by itself. Customers will have to take the dishes, make the orders and put back the finished dishes all by themselves.</li>
 </ul>
 
-    </article>
-    <footer><hr/><p>In Other Languages: <a href="Overview_.html">Other</a></p></footer>
+        </article>
+        <footer><hr/><p>In Other Languages: <a href="Overview_.html">Other</a></p></footer>
+    </div>
 </body>
 </html>

@@ -1,20 +1,26 @@
 ﻿<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"utf-8\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>周南星</title>
     <style>
-        /*Main contents*/
-        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
-        h1   { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
-        nav  { margin-bottom: 1rem; }
+        /* Main contents */
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: .3em; }
         nav a { text-decoration: none; color: #349; font-weight: 600; }
-        pre  { background: #f7f7f7; padding: .6em; overflow-x: auto; }
+        pre { background: #f7f7f7; padding: .6em; overflow-x: auto; }
         code { font-family: Consolas, Monaco, monospace; }
 
-        /*Metadata Table*/
-        table.metadata { border-collapse: collapse; margin-bottom: 1em; } /* "global" defaults; on narrow screens we’ll override below */
+        /* Header bar */
+        header.site-header { background-color: #ffffff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+        header.site-header .container { margin: 0 auto; display: flex; align-items: center; padding: 0; }
+        header.site-header .logo { font-size: 1.25rem; font-weight: bold; color: #333; text-decoration: none; }
+        header.site-header .back-link { margin-left: auto; font-size: .9rem; }
+
+        /* Metadata Table */
+        table.metadata { border-collapse: collapse; margin-bottom: 1em; }
         table.metadata th,
         table.metadata td { border: 1px solid #ccc; padding: .3em .6em; text-align: left; }
         table.metadata th { background: #f0f0f0; }
@@ -44,9 +50,18 @@
     </style>
 </head>
 <body>
-    <nav><a href="https://in.projectnine.world/Onlinepydia">⟵ Back</a></nav>
-    <article>
-        <p>(Remark) In terms of appearance and overall style, 周南星 is very similar to Xiao Kan - that's how they can be good friends and 看对方一眼就顺眼。However, for character differentiation, 萧衎 is more like 纨绔松垮 while 周南星 is the more 文艺、放荡不羁 style.</p>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://in.projectnine.world/Onlinepydia" class="logo">Onlinepydia</a>
+            <nav class="back-link">
+                <a href="javascript:history.back()">⟵ Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <p>(Remark) In terms of appearance and overall style, 周南星 is very similar to Xiao Kan - that's how they can be good friends and 看对方一眼就顺眼。However, for character differentiation, 萧衎 is more like 纨绔松垮 while 周南星 is the more 文艺、放荡不羁 style.</p>
 <ul>
 <li>(Character, design, appearance) 胡子渣渣（Nathan一样的外貌）、但是Fate Zero里面男主角的气质，以及Anthropologist的严谨（类似老教授）、平稳。Witty and fun.</li>
 <li>(Character, Prototype) Originally the name &quot;周南星&quot; is derived from Nathan from OTPP; Since 周南星 wrote 《小楼一夜听风雨·剑是公子》, and 周南星's original name was 陈旭阳. 陈旭阳 is the character archetype of 周南星.</li>
@@ -121,7 +136,8 @@ Consider formulate a prose and put into Legends of NFC.-->
 * (deesign, population, character, 周男星) (See ANT100 Essay Proposal related notes on "how many generations does it take for black to become white" and web pages "Anthropology, FAQ") We need to have a character that's appearing black skin yep speak very native Mandarin (he can also be a result of "CofN Project", the race mixing experiment proposed by 周男星 - details again see experiment details as proposed in ANT100 notes).
 	* (ANT100, argument) Here I propose a large-scale social experiment that can solve/prove the race issue once and for all: 1) Pick subject A (either an individual or a group of individuals satisfying the condition) black people, let it mate only with white people for N generations in North America for substantial cranial/skin color changes; 2) Pick subject B as white people and let it (and descendants) mate only with black people for M generations in Africa for substantial cranial/skin color changes; 3) Pick subject C as black people mating only with black people for L generations in North America. Pick subject D as white people mating only with white people for K generations in Africa. What are the possible consequences of this experiment?-->
 
-    </article>
-    
+        </article>
+        
+    </div>
 </body>
 </html>
