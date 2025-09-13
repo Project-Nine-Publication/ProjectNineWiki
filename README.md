@@ -2,7 +2,7 @@
 
 Yet another "ProjectNineWiki".
 
-Per [ProjectNineWikiToHTMLCompiler](https://github.com/Project-Nine-Tooling/ProjectNineWikiToHTMLCompiler).
+Per [ProjectNineWikiToHTMLCompiler](https://github.com/Project-Nine-Tooling/ProjectNineWikiToHTMLCompiler), this site just hosts generated static HTML contents for Project Nine wiki for public use. The index page just redirects to Emulated Internet [Onlinepydia](https://in.projectnine.world/Onlinepydia/).
 
 ## Setup
 
