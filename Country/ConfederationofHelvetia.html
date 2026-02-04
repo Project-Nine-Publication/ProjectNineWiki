@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confederation of Helvetia</title>
+
+    <style>
+        :root{
+            --bg: #fafafa;
+            --panel: #ffffff;
+            --text: #1f2328;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --link: #2f5bd6;
+            --codebg: #f6f8fa;
+            --shadow: 0 1px 2px rgba(0,0,0,.06);
+            --radius: 12px;
+        }
+
+        /* Theme via data attribute (manual toggle) */
+        :root[data-theme="dark"]{
+            --bg:#0b0f14; --panel:#0f1620; --text:#e6edf3; --muted:#9aa4b2;
+            --border:#223044; --link:#7aa2ff; --codebg:#0b111a;
+            --shadow: 0 1px 2px rgba(0,0,0,.35);
+        }
+
+        /* Default (only when user hasn't chosen a theme) */
+        @media (prefers-color-scheme: dark){
+            :root:not([data-theme]){
+                --bg:#0b0f14; --panel:#0f1620; --text:#e6edf3; --muted:#9aa4b2;
+                --border:#223044; --link:#7aa2ff; --codebg:#0b111a;
+                --shadow: 0 1px 2px rgba(0,0,0,.35);
+            }
+        }
+
+        html,body{ height:100%; }
+        body{
+            margin:0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height:1.65;
+            background:var(--bg);
+            color:var(--text);
+        }
+
+        a{ color:var(--link); text-decoration:none; }
+        a:hover{ text-decoration:underline; }
+
+        .container{
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header.site-header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: color-mix(in srgb, var(--panel) 92%, transparent);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(8px);
+        }
+        header.site-header .bar{
+            display:flex;
+            align-items:center;
+            gap:16px;
+            padding: 12px 0;
+        }
+        header.site-header .logo{
+            font-weight: 800;
+            letter-spacing: .2px;
+            color: var(--text);
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        header.site-header .logo small{
+            font-weight: 600;
+            color: var(--muted);
+        }
+        header.site-header .spacer{ flex:1; }
+        header.site-header .back-link a{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            font-weight: 600;
+            color: var(--muted);
+            padding: 8px 10px;
+            border:1px solid var(--border);
+            border-radius: 999px;
+            background: var(--panel);
+            box-shadow: var(--shadow);
+        }
+        header.site-header .back-link a:hover{ color: var(--text); text-decoration:none; }
+
+        /* Theme toggle button (styled like back link) */
+        .theme-toggle{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            font-weight: 600;
+            color: var(--muted);
+            padding: 8px 10px;
+            border:1px solid var(--border);
+            border-radius: 999px;
+            background: var(--panel);
+            box-shadow: var(--shadow);
+            cursor:pointer;
+            user-select:none;
+        }
+        .theme-toggle:hover{ color: var(--text); }
+        .theme-toggle:focus-visible{
+            outline: 2px solid color-mix(in srgb, var(--link) 60%, transparent);
+            outline-offset: 2px;
+        }
+
+        main{ padding: 20px 0 40px; }
+        article{
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+            margin-top: 1em;
+        }
+
+        h1,h2,h3{ line-height:1.25; }
+        h1{
+            margin: 0 0 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        h2{ margin-top: 1.6em; }
+        p{ margin: .75em 0; }
+
+        pre, code{
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        }
+        pre{
+            background: var(--codebg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            overflow-x:auto;
+        }
+        code{
+            background: color-mix(in srgb, var(--codebg) 75%, transparent);
+            border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+            border-radius: 8px;
+            padding: .1em .35em;
+        }
+        pre code{ background: transparent; border: none; padding:0; }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Infobox / summary table styling */
+        table.metadata, article table{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 0 14px;
+        }
+        table.metadata th, table.metadata td,
+        article table th, article table td{
+            border: 1px solid var(--border);
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+        table.metadata th, article table th{
+            background: color-mix(in srgb, var(--panel) 85%, var(--border));
+            text-align:left;
+            width: 34%;
+        }
+        table.metadata img, article table img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Float infobox on wider screens */
+        @media (min-width: 900px){
+            article{ display: flow-root; }
+            table.metadata{
+                float:right;
+                width: 320px;
+                margin: 0 0 14px 18px;
+            }
+        }
+
+        /* Tags row */
+        .tags{
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px dashed var(--border);
+            display:flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .tags .label{
+            color: var(--muted);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        .tag{
+            display:inline-flex;
+            align-items:center;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: color-mix(in srgb, var(--panel) 90%, var(--border));
+            color: var(--text);
+            font-weight: 600;
+            font-size: .92rem;
+            text-decoration:none;
+            white-space: nowrap;
+        }
+
+        footer.site-footer{
+            color: var(--muted);
+            margin-top: 16px;
+            font-size: .95rem;
+        }
+        footer.site-footer hr{
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0 12px;
+        }
+    </style>
+
+    <script>
+        (function () {
+            const STORAGE_KEY = "theme"; // "light" | "dark" | null
+            const root = document.documentElement;
+
+            function setTheme(theme) {
+                if (theme === "light" || theme === "dark") {
+                    root.setAttribute("data-theme", theme);
+                    localStorage.setItem(STORAGE_KEY, theme);
+                } else {
+                    root.removeAttribute("data-theme"); // fall back to prefers-color-scheme
+                    localStorage.removeItem(STORAGE_KEY);
+                }
+                updateToggleLabel();
+            }
+
+            function getStoredTheme() {
+                try { return localStorage.getItem(STORAGE_KEY); } catch { return null; }
+            }
+
+            function getEffectiveTheme() {
+                const explicit = root.getAttribute("data-theme");
+                if (explicit) return explicit;
+                return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+            }
+
+            function updateToggleLabel() {
+                const btn = document.getElementById("themeToggle");
+                if (!btn) return;
+                const effective = getEffectiveTheme();
+                btn.setAttribute("aria-pressed", effective === "dark" ? "true" : "false");
+                btn.textContent = effective === "dark" ? "🌙 Dark" : "☀️ Light";
+                btn.title = "Toggle color theme";
+            }
+
+            // Init: apply stored theme if any
+            const stored = getStoredTheme();
+            if (stored === "light" || stored === "dark") root.setAttribute("data-theme", stored);
+
+            // Keep label accurate if user has no explicit theme and OS theme changes
+            if (window.matchMedia) {
+                const mq = window.matchMedia("(prefers-color-scheme: dark)");
+                const handler = () => {
+                    if (!root.hasAttribute("data-theme")) updateToggleLabel();
+                };
+                if (mq.addEventListener) mq.addEventListener("change", handler);
+                else if (mq.addListener) mq.addListener(handler);
+            }
+
+            window.__theme = { setTheme, updateToggleLabel };
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", updateToggleLabel);
+            } else {
+                updateToggleLabel();
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="bar">
+                <a href="https://in.projectnine.world/Onlinepydia" class="logo">
+                    Onlinepydia <small>Project Nine</small>
+                </a>
+                <div class="spacer"></div>
+
+                <button id="themeToggle" class="theme-toggle" type="button"
+                    aria-label="Toggle color theme" aria-pressed="false">
+                    ☀️ Light
+                </button>
+
+                <nav class="back-link">
+                    <a href="javascript:history.back()">⟵ Back</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Confederation of Helvetia</h1>
+<table class="metadata">
+<thead>
+<tr>
+<th></th>
+<th>Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Confederation of Helvetia</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td>Alpstadt</td>
+</tr>
+<tr>
+<td>Population</td>
+<td>18496741</td>
+</tr>
+<tr>
+<td>Formation</td>
+<td>3100</td>
+</tr>
+<tr>
+<td>Continent</td>
+<td><a href="../Continents/Arphyria">Arphyria</a></td>
+</tr>
+<tr>
+<td>Planet</td>
+<td><a href="../Planets/Tellus">Tellus</a></td>
+</tr>
+</tbody>
+</table>
+<!--This entry is populated procedurally and pending fill-in specifics.-->
+<p>A mountainous nation renowned for its political neutrality, robust financial sector/focusing on finance, and mastery of precision instruments. Helvetia has cultivated a reputation as a crossroads of cultures, balancing democracy, federalism, and multiculturalism.</p>
+<h2 id="geopolitical-role">Geopolitical Role</h2>
+<p>Helvetia’s position in the <strong>heart of Arphyria</strong> gives it a paradoxical power: though militarily modest, its neutrality makes it indispensable.</p>
+<ul>
+<li><strong>Neutral Arbiter</strong>: Helvetia hosts the <strong>Arphyrian Council of States</strong>, where disputes between empires are mediated. Its neutrality allows diplomats to convene in Alpstadt without fear of espionage or coercion. Over centuries, this role has cemented Helvetia as a trusted guarantor of treaties.</li>
+<li><strong>Financial Anchor</strong>: The Confederation’s banks serve as vaults for dynasties, empires, and mercantile guilds alike. Helvetic secrecy laws and political independence ensure that even rivals deposit their reserves there, binding them indirectly to Helvetia’s stability.</li>
+<li><strong>Strategic Buffer</strong>: Surrounded by larger powers — the <strong>Imperium of Rhodan</strong> to the north, the <strong>League of Italienne Cities</strong> to the south, and the <strong>Romandic Principalities</strong> to the west — Helvetia’s mountains act as a shield and corridor alike. Control of alpine passes grants influence over continental trade routes.</li>
+<li><strong>Soft Power</strong>: Hosting humanitarian institutions, universities, and arbitration councils, Helvetia exports ideals of federalism, civic order, and multilingual coexistence. For neighbors, it represents a <strong>third path</strong> between imperial centralization and fractious nationalism.</li>
+</ul>
+<p>Helvetia’s balancing act is often described as “armed neutrality with velvet gloves”: ready to defend its mountains, but preferring to wield influence through diplomacy and finance.</p>
+<h2 id="domestic-life-and-traditions">Domestic Life and Traditions</h2>
+<p>Despite its cosmopolitan reputation abroad, everyday Helvetian life is deeply rooted in <strong>local cantonal traditions</strong>.</p>
+<h3 id="festivals">Festivals</h3>
+<ul>
+<li><strong>Fête de la Confédération</strong> (Founding Day): Celebrated each summer with bonfires lit on mountain ridges, echoing ancient signal fires of the first thirteen cantons.</li>
+<li><strong>Carnival of Masks</strong>: A winter festival where alpine towns parade in elaborate wooden masks representing spirits of snow, wolves, and avalanches — a fusion of pagan rites and Christian calendars.</li>
+<li><strong>Harvest of Bells</strong>: In rural cantons, the return of herds from high pastures is marked by processions of cattle wearing ornate cowbells, accompanied by music and feasts.</li>
+</ul>
+<h3 id="cuisine">Cuisine</h3>
+<p>Helvetian cuisine blends rustic alpine fare with cosmopolitan influences:</p>
+<ul>
+<li><strong>Cheeses and Fondue</strong>: Each canton guards its recipes, from sharp mountain cheeses to creamy valley blends. Shared pots of melted cheese embody Helvetian communal spirit.</li>
+<li><strong>Rösti and River Trout</strong>: Staples reflecting both agrarian and freshwater traditions.</li>
+<li><strong>Chocolate Craft</strong>: Precision in confectionery mirrors the same cultural obsession with micro-engineering. Chocolatiers are both artisans and national icons.</li>
+</ul>
+<p>Cuisine often emphasizes <strong>communal sharing</strong> and <strong>regional pride</strong>, reinforcing the balance between local identity and national unity.</p>
+<h3 id="architecture">Architecture</h3>
+<ul>
+<li><strong>Alpine Vernacular</strong>: Chalets with wide eaves, stone foundations, and carved balconies dominate rural landscapes. Many are centuries old, maintained with meticulous care.</li>
+<li><strong>Federal Modernism</strong>: In cities like Alpstadt, sleek yet restrained modernist buildings reflect Helvetia’s pragmatism — glass and stone in precise proportion.</li>
+<li><strong>Cantonal Diversity</strong>: Southern Italienne cantons show Mediterranean courtyards; western Romandic towns feature Gothic spires; Raetian valleys preserve wooden watchtowers once used against avalanches.</li>
+</ul>
+<p>Helvetians see architecture as a civic duty — each building must harmonize with its surroundings, whether mountain, meadow, or city square.</p>
+<h2 id="military-and-defense">Military and Defense</h2>
+<p>Helvetia’s doctrine of <strong>armed neutrality</strong> ensures that while it avoids entanglement in foreign wars, it remains fully prepared to repel aggression. The rugged geography provides natural fortifications, but the Confederation supplements this with careful organization.</p>
+<ul>
+<li><strong>Militia Tradition</strong>: Every able citizen undergoes military training, forming a well-drilled militia rather than a standing professional army. Weapons are kept at home, symbolizing both trust in citizens and readiness for defense.</li>
+<li><strong>Fortress Network</strong>: Mountain passes are studded with camouflaged redoubts, tunnels, and artillery hidden in the rock. Outsiders often joke that the Confederation has “hollowed out its mountains” — and the saying is not far from the truth.</li>
+<li><strong>Air and Signal Corps</strong>: Precision engineering underpins modern defense, with aerial scouts, encrypted communications, and watchtowers linking canton to canton in a seamless web of early warning.</li>
+<li><strong>Neutral Guard</strong>: Helvetia contributes ceremonial and protective forces abroad — a visible reminder of its neutrality. Embassies, international summits, and humanitarian convoys often employ Helvetian guards as trusted sentinels.</li>
+</ul>
+<p>This posture is less about conquest than deterrence. The Confederation’s message is simple: <strong>it will not fight your wars, but it will not yield its mountains.</strong></p>
+
+            <div class="tags"><span class="label">Tags:</span><span class="tag">Country</span></div>
+        </article>
+
+        
+    </main>
+
+    <script>
+        // Hook up the button after it exists in the DOM
+        (function () {
+            const btn = document.getElementById("themeToggle");
+            if (!btn) return;
+
+            btn.addEventListener("click", () => {
+                const root = document.documentElement;
+                const current = root.getAttribute("data-theme"); // null | "light" | "dark"
+                const next = (current || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark"
+                    ? "light"
+                    : "dark";
+                window.__theme.setTheme(next);
+            });
+
+            window.__theme.updateToggleLabel();
+        })();
+    </script>
+</body>
+</html>

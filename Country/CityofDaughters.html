@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>City of Daughters</title>
+
+    <style>
+        :root{
+            --bg: #fafafa;
+            --panel: #ffffff;
+            --text: #1f2328;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --link: #2f5bd6;
+            --codebg: #f6f8fa;
+            --shadow: 0 1px 2px rgba(0,0,0,.06);
+            --radius: 12px;
+        }
+
+        /* Theme via data attribute (manual toggle) */
+        :root[data-theme="dark"]{
+            --bg:#0b0f14; --panel:#0f1620; --text:#e6edf3; --muted:#9aa4b2;
+            --border:#223044; --link:#7aa2ff; --codebg:#0b111a;
+            --shadow: 0 1px 2px rgba(0,0,0,.35);
+        }
+
+        /* Default (only when user hasn't chosen a theme) */
+        @media (prefers-color-scheme: dark){
+            :root:not([data-theme]){
+                --bg:#0b0f14; --panel:#0f1620; --text:#e6edf3; --muted:#9aa4b2;
+                --border:#223044; --link:#7aa2ff; --codebg:#0b111a;
+                --shadow: 0 1px 2px rgba(0,0,0,.35);
+            }
+        }
+
+        html,body{ height:100%; }
+        body{
+            margin:0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height:1.65;
+            background:var(--bg);
+            color:var(--text);
+        }
+
+        a{ color:var(--link); text-decoration:none; }
+        a:hover{ text-decoration:underline; }
+
+        .container{
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header.site-header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: color-mix(in srgb, var(--panel) 92%, transparent);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(8px);
+        }
+        header.site-header .bar{
+            display:flex;
+            align-items:center;
+            gap:16px;
+            padding: 12px 0;
+        }
+        header.site-header .logo{
+            font-weight: 800;
+            letter-spacing: .2px;
+            color: var(--text);
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        header.site-header .logo small{
+            font-weight: 600;
+            color: var(--muted);
+        }
+        header.site-header .spacer{ flex:1; }
+        header.site-header .back-link a{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            font-weight: 600;
+            color: var(--muted);
+            padding: 8px 10px;
+            border:1px solid var(--border);
+            border-radius: 999px;
+            background: var(--panel);
+            box-shadow: var(--shadow);
+        }
+        header.site-header .back-link a:hover{ color: var(--text); text-decoration:none; }
+
+        /* Theme toggle button (styled like back link) */
+        .theme-toggle{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            font-weight: 600;
+            color: var(--muted);
+            padding: 8px 10px;
+            border:1px solid var(--border);
+            border-radius: 999px;
+            background: var(--panel);
+            box-shadow: var(--shadow);
+            cursor:pointer;
+            user-select:none;
+        }
+        .theme-toggle:hover{ color: var(--text); }
+        .theme-toggle:focus-visible{
+            outline: 2px solid color-mix(in srgb, var(--link) 60%, transparent);
+            outline-offset: 2px;
+        }
+
+        main{ padding: 20px 0 40px; }
+        article{
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+            margin-top: 1em;
+        }
+
+        h1,h2,h3{ line-height:1.25; }
+        h1{
+            margin: 0 0 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        h2{ margin-top: 1.6em; }
+        p{ margin: .75em 0; }
+
+        pre, code{
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        }
+        pre{
+            background: var(--codebg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            overflow-x:auto;
+        }
+        code{
+            background: color-mix(in srgb, var(--codebg) 75%, transparent);
+            border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+            border-radius: 8px;
+            padding: .1em .35em;
+        }
+        pre code{ background: transparent; border: none; padding:0; }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Infobox / summary table styling */
+        table.metadata, article table{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 0 14px;
+        }
+        table.metadata th, table.metadata td,
+        article table th, article table td{
+            border: 1px solid var(--border);
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+        table.metadata th, article table th{
+            background: color-mix(in srgb, var(--panel) 85%, var(--border));
+            text-align:left;
+            width: 34%;
+        }
+        table.metadata img, article table img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Float infobox on wider screens */
+        @media (min-width: 900px){
+            article{ display: flow-root; }
+            table.metadata{
+                float:right;
+                width: 320px;
+                margin: 0 0 14px 18px;
+            }
+        }
+
+        /* Tags row */
+        .tags{
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px dashed var(--border);
+            display:flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .tags .label{
+            color: var(--muted);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        .tag{
+            display:inline-flex;
+            align-items:center;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: color-mix(in srgb, var(--panel) 90%, var(--border));
+            color: var(--text);
+            font-weight: 600;
+            font-size: .92rem;
+            text-decoration:none;
+            white-space: nowrap;
+        }
+
+        footer.site-footer{
+            color: var(--muted);
+            margin-top: 16px;
+            font-size: .95rem;
+        }
+        footer.site-footer hr{
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0 12px;
+        }
+    </style>
+
+    <script>
+        (function () {
+            const STORAGE_KEY = "theme"; // "light" | "dark" | null
+            const root = document.documentElement;
+
+            function setTheme(theme) {
+                if (theme === "light" || theme === "dark") {
+                    root.setAttribute("data-theme", theme);
+                    localStorage.setItem(STORAGE_KEY, theme);
+                } else {
+                    root.removeAttribute("data-theme"); // fall back to prefers-color-scheme
+                    localStorage.removeItem(STORAGE_KEY);
+                }
+                updateToggleLabel();
+            }
+
+            function getStoredTheme() {
+                try { return localStorage.getItem(STORAGE_KEY); } catch { return null; }
+            }
+
+            function getEffectiveTheme() {
+                const explicit = root.getAttribute("data-theme");
+                if (explicit) return explicit;
+                return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+            }
+
+            function updateToggleLabel() {
+                const btn = document.getElementById("themeToggle");
+                if (!btn) return;
+                const effective = getEffectiveTheme();
+                btn.setAttribute("aria-pressed", effective === "dark" ? "true" : "false");
+                btn.textContent = effective === "dark" ? "🌙 Dark" : "☀️ Light";
+                btn.title = "Toggle color theme";
+            }
+
+            // Init: apply stored theme if any
+            const stored = getStoredTheme();
+            if (stored === "light" || stored === "dark") root.setAttribute("data-theme", stored);
+
+            // Keep label accurate if user has no explicit theme and OS theme changes
+            if (window.matchMedia) {
+                const mq = window.matchMedia("(prefers-color-scheme: dark)");
+                const handler = () => {
+                    if (!root.hasAttribute("data-theme")) updateToggleLabel();
+                };
+                if (mq.addEventListener) mq.addEventListener("change", handler);
+                else if (mq.addListener) mq.addListener(handler);
+            }
+
+            window.__theme = { setTheme, updateToggleLabel };
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", updateToggleLabel);
+            } else {
+                updateToggleLabel();
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="bar">
+                <a href="https://in.projectnine.world/Onlinepydia" class="logo">
+                    Onlinepydia <small>Project Nine</small>
+                </a>
+                <div class="spacer"></div>
+
+                <button id="themeToggle" class="theme-toggle" type="button"
+                    aria-label="Toggle color theme" aria-pressed="false">
+                    ☀️ Light
+                </button>
+
+                <nav class="back-link">
+                    <a href="javascript:history.back()">⟵ Back</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>City of Daughters</h1>
+<table class="metadata">
+<thead>
+<tr>
+<th></th>
+<th>Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>City of Daughters</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>City State</td>
+</tr>
+<tr>
+<td>Population</td>
+<td>150000</td>
+</tr>
+<tr>
+<td>Formation</td>
+<td>3469</td>
+</tr>
+<tr>
+<td>Continent</td>
+<td><a href="../Continents/Axia">Axia</a></td>
+</tr>
+<tr>
+<td>Planet</td>
+<td><a href="../Planets/Tellus">Tellus</a></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Female Kingdom</strong> (sometimes called the <em>City of Daughters</em> or <em>Matron's Haven</em>) is a sovereign city-state on Tellus. Unlike most other polities, it is entirely matriarchal and effectively free of men. Its society is founded on the belief that women embody unique divine gifts - blessings granted by an ancient, mysterious deity - that elevate them in ways unrelated to brute strength or traditional notions of magical might.</p>
+<p>Though small in territory, the kingdom holds outsized cultural and philosophical influence across Tellus. Outsiders view it as a paradoxical mix of utopian innovation and controversial social engineering.</p>
+<h2 id="origins">Origins</h2>
+<p>According to legend, an unnamed ancient deity blessed the founding women of the kingdom with extraordinary gifts:</p>
+<ul>
+<li>unmatched physical beauty,</li>
+<li>voices so captivating they could sway hearts and disarm conflict,</li>
+<li>and an unparalleled capacity for empathy and emotional resonance.</li>
+</ul>
+<p>These blessings were not meant for conquest but for survival and cohesion. Over centuries, these traits crystallized into the kingdom's defining culture: a society where women naturally take precedence in governance, community, and lineage.</p>
+<h2 id="culture-and-society">Culture and Society</h2>
+<h3 id="core-beliefs">Core Beliefs</h3>
+<p>City of Daughters is guided by long-standing traditions rather than rigid law. The prevailing belief is that women are not only socially and emotionally superior but spiritually closer to the divine. This belief is passed down through stories, songs, and ritual rather than legal enforcement, creating a deeply internalized cultural order.</p>
+<p><strong>The Song in the Mountain</strong></p>
+<pre><code>Upon the stone where shadows weep,  
+She laid her heart, too tired to keep.  
+The mountain sighed, the silence broke,  
+A mother's voice in stillness spoke.
+
+&quot;Rise, my daughter, heal through me,  
+Your song shall bind, your spirit free.  
+No hand shall chain, no heart shall fall,  
+For voices gentle conquer all.&quot;
+
+So through the ages echoes run,  
+A promise carried, daughter to one.  
+Not law, nor blade, nor iron reign,  
+But songs of love shall still remain.
+</code></pre>
+<h3 id="gender-norms">Gender Norms</h3>
+<ul>
+<li><strong>Absence of men:</strong> Male children are traditionally sent away or placed in allied lands, ensuring the kingdom's population remains overwhelmingly female. This practice is normalized through cultural framing rather than violent enforcement.</li>
+<li><strong>Marriage and Reproduction:</strong> Romantic love is de-emphasized. Instead, partnerships form around companionship, artistic collaboration, or political union. Reproduction is arranged through external sperm banks or trusted male donors, reframed as an act of community service rather than &quot;ownership.&quot;</li>
+</ul>
+<h3 id="social-arts">Social Arts</h3>
+<p>Because of their divine blessings, the arts dominate life in City of Daughters:</p>
+<ul>
+<li><strong>Song and Dance:</strong> Citizens are trained from youth in song, believed to carry persuasive and even disarming properties. Conflicts are often resolved through lyrical duels.</li>
+<li><strong>Intimacy and Pleasure:</strong> Erotic and sensual arts are elevated to cultural cornerstones, seen not as taboo but as spiritual expressions of the goddess's gifts.</li>
+<li><strong>Beauty as Diplomacy:</strong> Physical presentation is treated as a political tool. Ambassadors often &quot;negotiate&quot; through performance, grace, or charm rather than traditional treaties.</li>
+</ul>
+<h2 id="government">Government</h2>
+<p>In City of Daughters, governance is handled by a council of <em>Matrons</em>, elected by communal acclaim rather than heredity. Leadership is not based on lineage but on who demonstrates the greatest resonance with the deity's gifts - be it through artistry, beauty, or wisdom.</p>
+<h2 id="relationships-with-the-outside-world">Relationships with the Outside World</h2>
+<p>Neighboring nations are both fascinated and unsettled by City of Daughters. On one hand, its citizens are highly sought-after as performers, diplomats, and muses. On the other, its rejection of men as political or cultural participants challenges the patriarchal assumptions of surrounding states.</p>
+<p>The kingdom maintains neutrality in most conflicts, preferring cultural influence over military strength. Its unique reproductive system - outsourcing &quot;male contribution&quot; while reframing it as service - makes it economically interdependent yet socially insular.</p>
+<h2 id="controversies">Controversies</h2>
+<ul>
+<li><strong>Moral Debates:</strong> Many outsiders view City of Daughters's rejection of men as oppressive or unnatural, while its citizens see it as liberation.
+<del>* <strong>Genetic Concerns:</strong> Reliance on select external donors raises concerns about genetic bottlenecks, though the kingdom emphasizes quality of upbringing over biological ties.</del></li>
+<li><strong>Cultural Power:</strong> Some fear that the persuasive songs and performances of its citizens verge on mind-control, blurring the line between diplomacy and coercion.</li>
+</ul>
+<h2 id="legacy-and-influence">Legacy and Influence</h2>
+<p>Despite its small size, the Female Kingdom plays an outsized role in debates about gender, marriage, and identity across Tellus. It is often cited in discussions of the &quot;post-romantic&quot; and &quot;post-patriarchal&quot; movements, influencing art, philosophy, and even reproductive ethics beyond its borders.</p>
+
+            <div class="tags"><span class="label">Tags:</span><span class="tag">Country</span></div>
+        </article>
+
+        
+    </main>
+
+    <script>
+        // Hook up the button after it exists in the DOM
+        (function () {
+            const btn = document.getElementById("themeToggle");
+            if (!btn) return;
+
+            btn.addEventListener("click", () => {
+                const root = document.documentElement;
+                const current = root.getAttribute("data-theme"); // null | "light" | "dark"
+                const next = (current || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark"
+                    ? "light"
+                    : "dark";
+                window.__theme.setTheme(next);
+            });
+
+            window.__theme.updateToggleLabel();
+        })();
+    </script>
+</body>
+</html>
