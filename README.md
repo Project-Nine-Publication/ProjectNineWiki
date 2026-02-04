@@ -13,3 +13,11 @@ ProjectNineWikiToHTMLCompiler --input "Source\Wiki" --output "Destination\Wiki
 ```
 
 E.g. (working example) `ProjectNineWikiToHTMLCompiler --input "E:\Dropbox\Project Nine\ProjectNine_Rev1 (KMD, Repo)\Wiki" --output C:\Projects\Intermediate\ProjectNineWiki`.
+
+## Clearing
+
+Once in a while we need to purge the folder to remove old entries. When doing that, we can:
+
+* Delete all folders and files
+* Just keep `index.csv` and `CategoriesMap.csv` files
+* Just keep `.github` folder
